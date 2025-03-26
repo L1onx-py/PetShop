@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Hotel extends ServicoPetshop{
 
     private int qtdHoras;
@@ -26,6 +28,26 @@ public class Hotel extends ServicoPetshop{
 
     @Override
     public String descricao() {
-        return "Serviço Realizado: Hotel | " + " Tamanho Animal: ";
+        return "Serviço Realizado: Hotel | " + " Tamanho Animal: " + getTamAnimal() + " | Valor: R$ " + calculaPreco();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Hotel hotel = (Hotel) o;
+        return qtdHoras == hotel.qtdHoras;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), qtdHoras);
+    }
+
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "qtdHoras=" + qtdHoras +
+                '}';
     }
 }
