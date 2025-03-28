@@ -40,8 +40,7 @@ public class Hotel extends ServicoPetshop{
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), qtdHoras);
+    public int hashCode() {        return Objects.hash(super.hashCode(), qtdHoras);
     }
 
     @Override

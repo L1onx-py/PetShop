@@ -17,11 +17,11 @@ public class InventarioPetshop {
     }
 
     public String listaServicos() {
-        String servicos = "";
+        StringBuilder servicos = new StringBuilder();
         for (ServicoPetshop s : servico){
-            servicos += s.descricao() + "\n";
+            servicos.append(s.descricao()).append("\n");
         }
-        return servicos;
+        return servicos.toString();
     }
 
     public String descricaoServico(ServicoPetshop servico){

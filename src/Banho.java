@@ -32,6 +32,7 @@ public class Banho extends ServicoPetshop{
             case MEDIO -> precoBase + 15.00;
             case CURTO -> precoBase;
         };
+
     }
 
     @Override
